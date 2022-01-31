@@ -50,5 +50,30 @@ def delete_contact(contato):
     print(f'---> contato { contato } excluido com sucesso')
 
 
+def show_menu():
+    print('1 - Mostrar todos os contatos')
+    print('2 - Buscar contato')
+    print('3 - Incluir contato')
+    print('4 - Editar contato')
+    print('5 - Excluir contato')
+    print('0 - Fechar agenda')
 
-show_contacts()
+while True:
+    show_menu()
+    opcao = input('Escolha uma opção: ')
+    if opcao == '1':
+        show_contacts()
+    elif opcao == '2':
+        search(input('Digite o nome do contato: '))
+    elif opcao == '3':
+        add_contact(input('Digite o Nome: '), input('Digite o Telefone: '), input('Digite o Email '))
+    elif opcao == '4':
+        modify_contact(input('Digite o Nome de quem deseja modificar: '), input('Digite o Telefone: '), input('Digite o Email '))
+    elif opcao == '5':
+        delete_contact(input("Digite o contato que quer excluir: "))
+    elif opcao == '0':
+        print('Fechando programa')
+        break
+    else:
+        print('Opção inválida')
+
