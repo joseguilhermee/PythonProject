@@ -36,8 +36,15 @@ def add_contact(contato, telefone, email):
         'telefone': telefone,
         'email': email,
     }
-    print('contato adicionado com sucesso')
+    print(f'---> contato { contato } adicionado com sucesso')
 
-add_contact('joao', '7777777', 'testando@gmail.com')
+def modify_contact(contato, telefone, email):
+    AGENDA[contato] = {
+        'telefone': telefone,
+        'email': email,
+    }
+    print(f'---> contato { contato } editado com sucesso')
+
+add_contact('joao', '7777977', 'testando@gmail.com')
 
 show_contacts()
