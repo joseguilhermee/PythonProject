@@ -45,6 +45,10 @@ def modify_contact(contato, telefone, email):
     }
     print(f'---> contato { contato } editado com sucesso')
 
-add_contact('joao', '7777977', 'testando@gmail.com')
+def delete_contact(contato):
+    AGENDA.pop(contato)
+    print(f'---> contato { contato } excluido com sucesso')
+
+
 
 show_contacts()
